@@ -1,0 +1,37 @@
+.nav {
+  height: 300px;
+}
+.link {
+  color: #b3afaf;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav > hr {
+  color: #5c58580c;
+  border-radius: 30px;
+}
+.active {
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0%;
+}
+.active::after {
+  content: ">";
+  margin-left: 0px;
+  font-weight: bold;
+  background: #ffffff;
+  color: grey;
+  border-radius: 50px 1px 1px 50px;
+  padding: 6px 10px;
+  margin-right: -56px;
+}

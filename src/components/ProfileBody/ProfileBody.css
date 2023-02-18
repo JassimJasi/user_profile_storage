@@ -1,0 +1,142 @@
+.profile_body {
+  display: flex;
+  width: 100%;
+}
+
+/* left side div */
+.leftSide {
+  text-align: center;
+  margin-right: 25px;
+}
+.leftSide h2 {
+  width: 110px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 19px;
+  font-weight: 400;
+  text-align: center;
+  color: grey;
+}
+.leftSide img {
+  width: 200px;
+  margin-top: 25px;
+  border-radius: 50%;
+}
+.leftSide p {
+  width: 300px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(82, 82, 82);
+}
+.company,
+.userName {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.company div h2,
+.userName div h2 {
+  width: 110px;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: right;
+  color: grey;
+}
+.company div h3,
+.userName div h3 {
+  text-align: left;
+  margin: 0;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+  width: 230px;
+}
+.company div h3 {
+  width: 230px;
+}
+.leftSide hr {
+  width: 300px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(82, 82, 82);
+}
+/* left side div ends */
+
+.verticalLine {
+  border-left: 1px solid rgba(170, 169, 169, 0.753);
+  width: 0%;
+  height: 650px;
+  margin-left: 10px;
+}
+
+/* right side */
+.rightSide {
+  /* background: #000; */
+  width: 100%;
+  text-align: left;
+  padding-left: 80px;
+}
+.rightSide h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: grey;
+  margin-top: 5px;
+  font-weight: 400;
+}
+.address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 8px;
+}
+.address div h2 {
+  width: 110px;
+  text-align: right;
+  font-size: 20px;
+  color: grey;
+  font-weight: 400;
+  margin: 0px;
+  margin-top: 20px;
+}
+.address div h3 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+  width: 210px;
+  margin: 0px;
+  margin-top: 20px;
+}
+.map {
+  border-radius: 20px;
+}
+.geo {
+  display: flex;
+  gap: 30px;
+  justify-content: right;
+  padding-right: 5px;
+  margin-top: 10px;
+}
+.geo p {
+  font-size: 15px;
+  font-weight: 400;
+  color: grey;
+  margin-top: 5px;
+}
+.geo p span {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(82, 82, 82);
+}
+/* right side end */

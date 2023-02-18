@@ -1,0 +1,27 @@
+.userList {
+  margin-right: 25px;
+}
+.single_profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.single_profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.single_profile p {
+  color: rgb(102, 101, 101);
+}
+.userList hr {
+}
+@media (max-width: 660px) {
+  .single_profile p {
+    display: none;
+  }
+  .userList hr {
+    display: none;
+  }
+}
