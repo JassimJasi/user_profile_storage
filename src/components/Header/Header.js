@@ -1,17 +1,19 @@
-import { useRef, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import useClickOutside from "../../helper/clickOutSide";
-import { addUser } from "../../redux/action";
 import "./Header.css";
 
-function Header({ title, user }) {
+function Header({ title, user, setClick }) {
   const popup = useRef(null);
   const [show, setShow] = useState(false);
+  const [allUser, setAllUser] = useState(false);
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-
-  const allUser = useSelector((state) => state.user_list);
+  useEffect(() => {
+    const getAllUserLocalStorage = localStorage.getItem("all_user_data");
+    if (getAllUserLocalStorage) {
+      setAllUser(JSON.parse(getAllUserLocalStorage));
+    }
+  }, []);
   //console.log(allUser);
 
   const handleClick1 = () => {
@@ -20,7 +22,9 @@ function Header({ title, user }) {
   useClickOutside(popup, () => setShow(false));
   const handleClick = (data) => {
     //console.log("click");
-    dispatch(addUser(data));
+    // dispatch(addUser(data));
+    localStorage.setItem("user_data", JSON.stringify(data));
+    setClick((prev) => !prev);
     navigate("/user_profile");
   };
 
@@ -48,7 +52,11 @@ function Header({ title, user }) {
           {allUser?.slice(user.id, user.id + 2).map((data) => (
             <>
               <hr />
-              <div className="profile1" onClick={() => handleClick(data)}>
+              <div
+                className="profile1"
+                onClick={() => handleClick(data)}
+                key={data.id}
+              >
                 <img src={data?.profilepicture} alt="" srcset="" />
                 <h5>{data?.name}</h5>
               </div>

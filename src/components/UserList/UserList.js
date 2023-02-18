@@ -9,10 +9,11 @@ function UserList(props) {
   const handleClick = (e) => {
     // console.log();
     dispatch(addUser(props.userDetails));
+    localStorage.setItem("user_data", JSON.stringify(props.userDetails));
     navigate("/user_profile");
   };
   return (
-    <div className="userList">
+    <div className="userList" key={props.key}>
       <div className="single_profile" key={props?.index} onClick={handleClick}>
         <img src={props?.userDetails.profilepicture} alt="" srcset="" />
         <p>{props?.userDetails.name}</p>

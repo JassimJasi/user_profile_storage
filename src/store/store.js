@@ -6,7 +6,6 @@ const initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log("dddd", action.payload);
   switch (action.type) {
     case "USER_SELECTED":
       return {

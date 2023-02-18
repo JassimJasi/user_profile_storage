@@ -13,7 +13,9 @@ function Home() {
     axios.get("https://panorbit.in/api/users.json").then((res) => {
       setData(res.data.users);
       dispatch(UserDetails(res.data.users));
+      localStorage.setItem("all_user_data", JSON.stringify(res.data.users));
     });
+    // eslint-disable-next-line
   }, []);
   //console.log(data);
   return (

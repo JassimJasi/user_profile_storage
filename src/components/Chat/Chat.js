@@ -1,15 +1,20 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Chat.css";
 import { BsChatRight } from "react-icons/bs";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { useSelector } from "react-redux";
 import useClickOutside from "../../helper/clickOutSide";
 
 function Chat({ setSingleChat }) {
-  const user = useSelector((state) => state.user_list);
+  const [user, setUser] = useState();
   const [hide, setHide] = useState(false);
   const chatPopup = useRef(null);
   useClickOutside(chatPopup, () => setHide(false));
+  useEffect(() => {
+    const getAllUserLocalStorage = localStorage.getItem("all_user_data");
+    if (getAllUserLocalStorage) {
+      setUser(JSON.parse(getAllUserLocalStorage));
+    }
+  }, []);
 
   return (
     <div

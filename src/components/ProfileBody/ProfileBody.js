@@ -76,14 +76,11 @@ function ProfileBody(props) {
         </div>
         {/* ---------- (map)---------- */}
         <iframe
+          title="Map"
           width="100%"
           height="350"
           className="map"
           src={`https://maps.google.com/maps?q=${address?.street},t=&z=13&ie=UTF8&iwloc=&output=embed`}
-          frameBorder="0"
-          scrolling="no"
-          marginHeight="0"
-          marginWidth="0"
         ></iframe>
         {/* ---------- (geo)--------- */}
         <div className="geo">
