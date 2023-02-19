@@ -30,7 +30,6 @@ function Chat({ setSingleChat }) {
       </div>
       {hide ? (
         <div className="profiles" ref={chatPopup}>
-          {/* --------- Data maping ------ */}
           {user?.map((data) => (
             <div key={data.id} onClick={() => setSingleChat(data)}>
               <div className="maping_div">

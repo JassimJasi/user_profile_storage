@@ -62,11 +62,6 @@ function Header({ title, user, setClick }) {
               </div>
             </>
           ))}
-
-          {/* <div className="profile1">
-            <img src={user.profilepicture} alt="" srcset="" />
-            <h5>{user.name}</h5>
-          </div> */}
           <button onClick={() => navigate("/")}>Sign out</button>
         </div>
       ) : null}

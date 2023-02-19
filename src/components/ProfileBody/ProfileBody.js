@@ -18,10 +18,8 @@ function ProfileBody(props) {
   } = props?.user;
   return (
     <div className="profile_body">
-      {/* ---------- (left side)----------- */}
       <div className="leftSide">
         <img src={profilepicture} alt="profile img" />
-        {/* ------------ (name) ----------- */}
         <p>{name}</p>
         <div className="userName">
           <div>
@@ -38,7 +36,6 @@ function ProfileBody(props) {
           </div>
         </div>
         <hr />
-        {/* --------------- (company)--------- */}
         <h2>Company</h2>
         <div className="company">
           <div>
@@ -53,12 +50,8 @@ function ProfileBody(props) {
           </div>
         </div>
       </div>
-      {/* -------- (vertical line) ------ */}
       <p className="verticalLine"></p>
-
-      {/* -------- (right side)---------- */}
       <div className="rightSide">
-        {/* -----------(address)------- */}
         <h2>Address:</h2>
         <div className="address">
           <div>
@@ -74,7 +67,6 @@ function ProfileBody(props) {
             <h3>{address?.zipcode}</h3>
           </div>
         </div>
-        {/* ---------- (map)---------- */}
         <iframe
           title="Map"
           width="100%"
@@ -82,7 +74,6 @@ function ProfileBody(props) {
           className="map"
           src={`https://maps.google.com/maps?q=${address?.street},t=&z=13&ie=UTF8&iwloc=&output=embed`}
         ></iframe>
-        {/* ---------- (geo)--------- */}
         <div className="geo">
           <p>
             Lat : <span>{address?.geo.lat}</span>
@@ -91,7 +82,6 @@ function ProfileBody(props) {
             Lng : <span>{address?.geo.lng}</span>
           </p>
         </div>
-        {/* ------------- (chat) ---------- */}
         <div>
           <Chat setSingleChat={setSingleChat} />
           {singleChat ? (

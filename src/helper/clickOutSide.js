@@ -7,6 +7,7 @@ export default function useClickOutside(ref, fun) {
         return;
       }
       fun();
+      // eslint-disable-next-line
     };
     document.addEventListener("mousedown", listener);
     document.addEventListener("touchstart", listener);
@@ -15,5 +16,6 @@ export default function useClickOutside(ref, fun) {
       document.removeEventListener("mousedown", listener);
       document.removeEventListener("touchstart", listener);
     };
+    // eslint-disable-next-line
   }, [ref]);
 }
