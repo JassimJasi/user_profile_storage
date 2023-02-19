@@ -19,7 +19,7 @@ function Chat({ setSingleChat }) {
   return (
     <div
       className="mainDiv"
-      style={{ marginTop: hide ? "-326px" : "-72px", marginLeft: "378px" }}
+      style={{ marginTop: hide ? "-270px" : "-10px", marginLeft: "378px" }}
     >
       <div onClick={() => setHide((prev) => !prev)} className="chat">
         <div>

@@ -10,7 +10,7 @@ function ChatBox({ setSingleChat, singleChat }) {
     <div
       className="mainDiv"
       style={{
-        marginTop: "-270px",
+        marginTop: "-265px",
         right: "350px",
         marginLeft: "378px",
       }}
