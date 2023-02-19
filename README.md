@@ -10,7 +10,7 @@ Clone the project
   git clone https://github.com/JassimJasi/user_profile_storage.git
 ```
 
-Go to the project directory backend
+Go to the project directory
 
 ```bash
   cd profile_details
@@ -34,7 +34,7 @@ Axios
 
 ```bash
   Axios : npm i axios,
-  A common library for sending HTTP requests from a web application is called Axios. Axios can be used with React to submit data, submit data, and carry out additional CRUD tasks.
+  A common library for sending HTTP requests from a web application. Axios can be used with React to submit data, submit data, and carry out additional CRUD tasks.
 ```
 
 React-Icons
